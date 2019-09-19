@@ -37,7 +37,11 @@ test.txt （2行文字）——add——commit——修改增加test.txt的内容（3行文字）——rm
 git push -u origin master           #由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
 
 git remote add origin git@server-name:path/repo-name.git             #关联一个远程库 
-git remote add origin git@github.com:hufeixia5/learngit.git    
+git remote add origin git@github.com:hufeixia5/learngit.git  
+git clone  git@github.com:hufeixia5/gitskills.git                    #远程克隆一份远程仓库的到本地
+你也许还注意到，GitHub给出的地址不止一个，还可以用https://github.com/michaelliao/gitskills.git这样的地址。实际上，Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。
+
+使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。
 ##############################################################################
 
 
